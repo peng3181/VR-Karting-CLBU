@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR Karting CLUB</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: url('https://i.imgur.com/JZl0BLW.jpg') no-repeat center center/cover;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .content section {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .content h2 {
+            color: #e63946;
+            border-bottom: 2px solid #e63946;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .content img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px auto;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #e63946;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #d62828;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>VR Karting CLUB</h1>
+        <p>体验速度与激情的完美结合！</p>
+    </header>
+
+    <nav>
+        <a href="#about">关于我们</a>
+        <a href="#tracks">卡丁车赛道</a>
+        <a href="#events">会员活动</a>
+        <a href="#contact">联系我们</a>
+    </nav>
+
+    <div class="content">
+
+        <section id="about">
+            <h2>关于我们</h2>
+            <p>VR Karting CLUB 成立于2020年，致力于提供最顶级的卡丁车体验。我们是一家充满激情的俱乐部，旨在为卡丁车爱好者提供一个安全、刺激的比赛和练习场地。</p>
+            <img src="karting_background.jpg" alt="俱乐部图片">
+            <h3>我们的团队</h3>
+            <ul>
+                <li>李华 - 创始人兼总经理</li>
+                <li>张伟 - 赛事总监</li>
+                <li>王芳 - 客户关系经理</li>
+            </ul>
+        </section>
+
+        <section id="tracks">
+            <h2>卡丁车赛道</h2>
+            <img src="https://i.imgur.com/UZQVvTq.jpg" alt="卡丁车赛道">
+            <p>我们提供初级、中级和高级赛道，以满足不同水平的需求。每条赛道都经过专业设计，确保比赛的刺激性与安全性。</p>
+            <h3>设备与安全</h3>
+            <p>所有卡丁车均配备最新的安全设施，确保您的安全。我们的团队会在每次比赛前对设备进行全面检查和维护。</p>
+        </section>
+
+        <section id="events">
+            <h2>会员活动</h2>
+            <p>会员享受专属赛道使用权，优惠活动以及更多特权。</p>
+            <img src="https://i.imgur.com/5ZHpZ7Y.jpg" alt="会员活动">
+            <h3>活动安排</h3>
+            <ul>
+                <li>8月20日：高级赛道开放日</li>
+                <li>9月5日：年度会员聚会</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>联系我们</h2>
+            <p>地址：上海市徐汇区漕溪北路398号</p>
+            <p>电话：123-456-7890</p>
+            <p>邮箱：info@vrkartingclub.com</p>
+            <h3>在线留言</h3>
+            <form action="submit_form.php" method="post">
+                <label for="name">姓名：</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">邮箱：</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="message">留言：</label>
+                <textarea id="message" name="message" rows="4" required></textarea><br>
+                <input type="submit" value="发送">
+            </form>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 VR Karting CLUB. 版权所有。</p>
+    </footer>
+
+</body>
+</html>
